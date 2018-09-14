@@ -1,0 +1,85 @@
+#! /usr/local/bin/vvp
+:ivl_version "10.1 (stable)" "(v10_1-107-gab6ae79)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1a5e190 .scope module, "demorgan_test" "demorgan_test" 2 3;
+ .timescale 0 0;
+v0x1a75320_0 .var "A", 0 0;
+v0x1a753e0_0 .net "AandB", 0 0, L_0x1a761f0;  1 drivers
+v0x1a754b0_0 .net "AorB", 0 0, L_0x1a75e50;  1 drivers
+v0x1a755b0_0 .var "B", 0 0;
+v0x1a75680_0 .net "nA", 0 0, L_0x1a75bc0;  1 drivers
+v0x1a75720_0 .net "nAandB", 0 0, L_0x1a76380;  1 drivers
+v0x1a757f0_0 .net "nAandnB", 0 0, L_0x1a75d90;  1 drivers
+v0x1a758c0_0 .net "nAorB", 0 0, L_0x1a75f10;  1 drivers
+v0x1a75990_0 .net "nAornB", 0 0, L_0x1a75fd0;  1 drivers
+v0x1a75af0_0 .net "nB", 0 0, L_0x1a75c80;  1 drivers
+S_0x1a5e310 .scope module, "dut" "demorgan" 2 9, 3 1 0, S_0x1a5e190;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "nA"
+    .port_info 3 /OUTPUT 1 "nB"
+    .port_info 4 /OUTPUT 1 "AandB"
+    .port_info 5 /OUTPUT 1 "AorB"
+    .port_info 6 /OUTPUT 1 "nAandnB"
+    .port_info 7 /OUTPUT 1 "nAornB"
+    .port_info 8 /OUTPUT 1 "nAandB"
+    .port_info 9 /OUTPUT 1 "nAorB"
+L_0x1a75bc0 .functor NOT 1, v0x1a75320_0, C4<0>, C4<0>, C4<0>;
+L_0x1a75c80 .functor NOT 1, v0x1a755b0_0, C4<0>, C4<0>, C4<0>;
+L_0x1a75d90 .functor AND 1, L_0x1a75bc0, L_0x1a75c80, C4<1>, C4<1>;
+L_0x1a75e50 .functor OR 1, v0x1a75320_0, v0x1a755b0_0, C4<0>, C4<0>;
+L_0x1a75f10 .functor NOT 1, L_0x1a75e50, C4<0>, C4<0>, C4<0>;
+L_0x1a75fd0 .functor OR 1, L_0x1a75bc0, L_0x1a75c80, C4<0>, C4<0>;
+L_0x1a761f0 .functor AND 1, v0x1a75320_0, v0x1a755b0_0, C4<1>, C4<1>;
+L_0x1a76380 .functor NOT 1, L_0x1a761f0, C4<0>, C4<0>, C4<0>;
+v0x1a26df0_0 .net "A", 0 0, v0x1a75320_0;  1 drivers
+v0x1a749d0_0 .net "AandB", 0 0, L_0x1a761f0;  alias, 1 drivers
+v0x1a74a90_0 .net "AorB", 0 0, L_0x1a75e50;  alias, 1 drivers
+v0x1a74b60_0 .net "B", 0 0, v0x1a755b0_0;  1 drivers
+v0x1a74c20_0 .net "nA", 0 0, L_0x1a75bc0;  alias, 1 drivers
+v0x1a74d30_0 .net "nAandB", 0 0, L_0x1a76380;  alias, 1 drivers
+v0x1a74df0_0 .net "nAandnB", 0 0, L_0x1a75d90;  alias, 1 drivers
+v0x1a74eb0_0 .net "nAorB", 0 0, L_0x1a75f10;  alias, 1 drivers
+v0x1a74f70_0 .net "nAornB", 0 0, L_0x1a75fd0;  alias, 1 drivers
+v0x1a750c0_0 .net "nB", 0 0, L_0x1a75c80;  alias, 1 drivers
+    .scope S_0x1a5e190;
+T_0 ;
+    %vpi_call 2 15 "$display", "A B | ~A ~B | ~A~B | ~(A+B) | (~A)+(~B) | ~(AB)" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1a75320_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1a755b0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 17 "$display", "%b %b |  %b  %b |   %b  |    %b   |     %b     |   %b ", v0x1a75320_0, v0x1a755b0_0, v0x1a75680_0, v0x1a75af0_0, v0x1a757f0_0, v0x1a758c0_0, v0x1a75990_0, v0x1a75720_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1a75320_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1a755b0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 19 "$display", "%b %b |  %b  %b |   %b  |    %b   |     %b     |   %b ", v0x1a75320_0, v0x1a755b0_0, v0x1a75680_0, v0x1a75af0_0, v0x1a757f0_0, v0x1a758c0_0, v0x1a75990_0, v0x1a75720_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1a75320_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x1a755b0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 21 "$display", "%b %b |  %b  %b |   %b  |    %b   |     %b     |   %b ", v0x1a75320_0, v0x1a755b0_0, v0x1a75680_0, v0x1a75af0_0, v0x1a757f0_0, v0x1a758c0_0, v0x1a75990_0, v0x1a75720_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1a75320_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x1a755b0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 23 "$display", "%b %b |  %b  %b |   %b  |    %b   |     %b     |   %b ", v0x1a75320_0, v0x1a755b0_0, v0x1a75680_0, v0x1a75af0_0, v0x1a757f0_0, v0x1a758c0_0, v0x1a75990_0, v0x1a75720_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "hw1.t.v";
+    "./hw1.v";
