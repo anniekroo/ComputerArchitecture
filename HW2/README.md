@@ -39,21 +39,20 @@ To create a structural multiplexer in Verilog, I aimed to recreate the following
 ![Alt text](./schematics/multiplex_schem.png "Multiplexer schematic (from TutorialsPoint)")
 I then verified that my multiplexer worked by running my file on a test bench that I created to test every case of inputs. This results in the following truth table:  
 
-En A0 A1| O0 O1 O2 O3 | Expected Output  
 i0 i1 i2 i3| A0 A1|Out| Expected Output  
-0  0  0  0 | 0  1 | 0 | False
-0  0  0  0 | 1  0 | 0 | False
+0  0  0  0 | 0  1 | 0 | False  
+0  0  0  0 | 1  0 | 0 | False  
 0  0  0  0 | 0  0 | 0 | False    
 0  0  0  0 | 1  1 | 0 | False  
-1  0  0  0 | 0  1 | 0 | False
+1  0  0  0 | 0  1 | 0 | False  
 1  0  0  0 | 0  0 | 1 | True    
 1  0  0  0 | 1  0 | 0 | False  
-0  1  0  0 | 0  0 | 0 | False
-0  1  0  0 | 0  1 | 0 | False
-0  1  0  0 | 1  0 | 1 | True
-0  1  0  0 | 1  1 | 0 | False
-0  0  1  0 | 0  0 | 0 | False
-0  0  1  0 | 0  1 | 1 | True
+0  1  0  0 | 0  0 | 0 | False  
+0  1  0  0 | 0  1 | 0 | False  
+0  1  0  0 | 1  0 | 1 | True  
+0  1  0  0 | 1  1 | 0 | False  
+0  0  1  0 | 0  0 | 0 | False  
+0  0  1  0 | 0  1 | 1 | True  
 1  0  0  0 | 1  1 | 0 | False            
 0  0  1  0 | 1  0 | 0 | False  
 0  0  1  0 | 1  1 | 0 | False  
@@ -68,30 +67,30 @@ i0 i1 i2 i3| A0 A1|Out| Expected Output
 0  1  1  0 | 0  0 | 0 | False  
 0  1  1  0 | 0  1 | 1 | True  
 0  1  1  0 | 1  0 | 1 | True  
-1  1  0  0 | 0  0 | 1 | True
+1  1  0  0 | 0  0 | 1 | True  
 0  1  1  0 | 1  1 | 0 | False    
-1  1  0  0 | 1  0 | 1 | True
-1  1  0  0 | 1  1 | 0 | False
+1  1  0  0 | 1  0 | 1 | True  
+1  1  0  0 | 1  1 | 0 | False  
 1  1  0  0 | 0  1 | 0 | False      
 1  0  0  1 | 0  0 | 1 | True  
 1  0  0  1 | 0  1 | 0 | False  
-1  0  0  1 | 1  1 | 1 | True
+1  0  0  1 | 1  1 | 1 | True  
 1  0  0  1 | 1  0 | 0 | False    
 0  1  0  1 | 0  0 | 0 | False  
-0  1  0  1 | 1  0 | 1 | True
-0  1  0  1 | 1  1 | 1 | True
-1  0  1  0 | 0  0 | 1 | True
+0  1  0  1 | 1  0 | 1 | True  
+0  1  0  1 | 1  1 | 1 | True  
+1  0  1  0 | 0  0 | 1 | True  
 0  1  0  1 | 0  1 | 0 | False      
 1  0  1  0 | 0  1 | 1 | True  
 1  0  1  0 | 1  0 | 0 | False  
 1  0  1  0 | 1  1 | 0 | False  
-1  1  1  0 | 0  0 | 1 | True  
-1  1  1  0 | 1  0 | 1 | True
-1  1  1  0 | 1  1 | 0 | False
-1  1  0  1 | 0  0 | 1 | True
-1  1  0  1 | 0  1 | 0 | False
-1  1  0  1 | 1  0 | 1 | True
-1  1  0  1 | 1  1 | 1 | True
+1  1  1  0 | 0  0 | 1 | True   
+1  1  1  0 | 1  0 | 1 | True  
+1  1  1  0 | 1  1 | 0 | False  
+1  1  0  1 | 0  0 | 1 | True  
+1  1  0  1 | 0  1 | 0 | False  
+1  1  0  1 | 1  0 | 1 | True  
+1  1  0  1 | 1  1 | 1 | True  
 1  1  1  0 | 0  1 | 1 | True            
 1  0  1  1 | 0  0 | 1 | True  
 1  0  1  1 | 0  1 | 1 | True  
