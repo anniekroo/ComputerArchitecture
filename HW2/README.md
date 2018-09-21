@@ -113,7 +113,7 @@ test bench which gave exactly the same truth table which I will not include agai
 Because these two are identical and because they both matched the expected output, I concluded that my device was working as expected.  
 Then I looked into the gate delay propagation using GTK. From this, I got the following
 output graph.  
-![Alt text](/multiGTK.png?raw=true "Multiplexer Gate Delay")  
+![Alt text](./multiGTK.png "Multiplexer Gate Delay")  
 
 # Adder:  
 
