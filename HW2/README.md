@@ -1,7 +1,7 @@
-#Naming Schemes:  
+# Naming Schemes:  
 In this repo are 3 verilog schematics named decoder.v, multiplexer.v, and adder.v. In addition there are 3 test benches to run these schematics: decoder.t.v, multiplexer.t.v, and adder.t.v. There are also scripts used to run the tests named hw2decode, hw2multi, and hw2add. to run one of the schematics on a test bench simply use the commands:  
 ./hw2decode, ./hw2add, or ./hw2multi  
-#Decoder  
+# Decoder:   
 To create a structural decoder in Verilog, I aimed to recreate the following circuit diagram.
 ![Alt text](/schematic/decode_schem.png?raw=true "Decoder schematic (from All about circuits)")
 I then verified that my decoder worked by running the provided test bench on my circuit and
@@ -34,7 +34,7 @@ Then I looked into the gate delay propagation using GTK. From this, I got the fo
 output graph.  
 ![Alt text](/decoderGTK.png?raw=true "Decoder Gate Delay")
 
-#Multiplexer
+# Multiplexer:
 To create a structural multiplexer in Verilog, I aimed to recreate the following circuit diagram.
 ![Alt text](/schematic/multiplex_schem.png?raw=true "Multiplexer schematic (from TutorialsPoint)")
 I then verified that my multiplexer worked by running my file on a test bench that I created to test every case of inputs. This results in the following truth table:  
@@ -115,7 +115,7 @@ Then I looked into the gate delay propagation using GTK. From this, I got the fo
 output graph.  
 ![Alt text](/multiGTK.png?raw=true "Multiplexer Gate Delay")  
 
-#Adder  
+# Adder:  
 
 To create a structural adder in Verilog, I aimed to recreate the following circuit diagram.  
 ![Alt text](/schematic/add_schem.jpg?raw=true "Full Adder schematic (from ResearchGate)")  
