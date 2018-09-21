@@ -3,7 +3,7 @@ In this repo are 3 verilog schematics named decoder.v, multiplexer.v, and adder.
 ./hw2decode, ./hw2add, or ./hw2multi  
 # Decoder:   
 To create a structural decoder in Verilog, I aimed to recreate the following circuit diagram.
-![Alt text](/schematic/decode_schem.png?raw=true "Decoder schematic (from All about circuits)")
+![Alt text](./schematics/decode_schem.png?raw=true "Decoder schematic (from All about circuits)")
 I then verified that my decoder worked by running the provided test bench on my circuit and
 getting out the following truth table:  
 
@@ -32,11 +32,11 @@ En A0 A1| O0 O1 O2 O3 | Expected Output
 Because these two are identical I concluded that my device was working as expected.
 Then I looked into the gate delay propagation using GTK. From this, I got the following
 output graph.  
-![Alt text](/decoderGTK.png?raw=true "Decoder Gate Delay")
+![Alt text](./decoderGTK.png?raw=true "Decoder Gate Delay")
 
 # Multiplexer:
 To create a structural multiplexer in Verilog, I aimed to recreate the following circuit diagram.
-![Alt text](/schematic/multiplex_schem.png "Multiplexer schematic (from TutorialsPoint)")
+![Alt text](./schematics/multiplex_schem.png "Multiplexer schematic (from TutorialsPoint)")
 I then verified that my multiplexer worked by running my file on a test bench that I created to test every case of inputs. This results in the following truth table:  
 
 En A0 A1| O0 O1 O2 O3 | Expected Output  
@@ -118,7 +118,7 @@ output graph.
 # Adder:  
 
 To create a structural adder in Verilog, I aimed to recreate the following circuit diagram.  
-![Alt text](https://github.com/anniekroo/ComputerArchitecture/tree/master/HW2/schematic/add_schem.png "Full Adder schematic from ResearchGate")  
+![Alt text](./schematics/add_schem.png "Full Adder schematic from ResearchGate")  
 I then verified that my adder worked by running a test bench on my circuit that I modeleded after the example test bench and got out the following truth table:  
 
 a  b in | Out Sum| Expected Output  
@@ -149,4 +149,4 @@ a  b in | Out Sum| Expected Output
 Because these two are identical I concluded that my device was working as expected.
 Then I looked into the gate delay propagation using GTK. From this, I got the following
 output graph.  
-![Alt text](/adderGTK.png?raw=true "Adder Gate Delay")  
+![Alt text](./adderGTK.png?raw=true "Adder Gate Delay")  
