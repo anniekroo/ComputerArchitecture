@@ -137,7 +137,7 @@ test bench which similarly gave the the truth table:
 
 a  b in | Out Sum| Expected Output  
 0  0  0 |  0   0 | All False  
-1  0  0 |  0   1 | Sum Only
+1  0  0 |  0   1 | Sum Only  
 0  0  1 |  0   1 | Sum Only    
 1  0  1 |  1   0 | Carryout Only  
 0  1  0 |  0   1 | Sum Only  
