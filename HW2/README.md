@@ -118,7 +118,7 @@ output graph.
 # Adder:  
 
 To create a structural adder in Verilog, I aimed to recreate the following circuit diagram.  
-![Alt text](/schematic/add_schem.jpg?raw=true "Full Adder schematic (from ResearchGate)")  
+![Alt text](https://github.com/anniekroo/ComputerArchitecture/tree/master/HW2/schematic/add_schem.jpg?raw=true "Full Adder schematic from ResearchGate")  
 I then verified that my adder worked by running a test bench on my circuit that I modeleded after the example test bench and got out the following truth table:  
 
 a  b in | Out Sum| Expected Output  
