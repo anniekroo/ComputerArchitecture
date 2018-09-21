@@ -7,31 +7,31 @@ To create a structural decoder in Verilog, I aimed to recreate the following cir
 I then verified that my decoder worked by running the provided test bench on my circuit and
 getting out the following truth table:
 
-En A0 A1| O0 O1 O2 O3 | Expected Output
-0  0  0 |  0  0  0  0 | All false
-0  1  0 |  0  0  0  0 | All false
-0  0  1 |  0  0  0  0 | All false
-0  1  1 |  0  0  0  0 | All false
-1  0  0 |  1  0  0  0 | O0 Only
+En A0 A1| O0 O1 O2 O3 | Expected Output  
+0  0  0 |  0  0  0  0 | All false  
+0  1  0 |  0  0  0  0 | All false  
+0  0  1 |  0  0  0  0 | All false    
+0  1  1 |  0  0  0  0 | All false  
 1  1  0 |  0  1  0  0 | O1 Only
-1  0  1 |  0  0  1  0 | O2 Only
-1  1  1 |  0  0  0  1 | O3 Only
+1  0  0 |  1  0  0  0 | O0 Only    
+1  0  1 |  0  0  1  0 | O2 Only  
+1  1  1 |  0  0  0  1 | O3 Only  
 
 This truth table shows the device working as expected. To ensure that the test
 bench was set up correctly I tried to run the provided behavioral model on the
-test bench which similarly gave the the truth table:
-En A0 A1| O0 O1 O2 O3 | Expected Output
-0  0  0 |  0  0  0  0 | All false
-0  1  0 |  0  0  0  0 | All false
-0  0  1 |  0  0  0  0 | All false
-0  1  1 |  0  0  0  0 | All false
-1  0  0 |  1  0  0  0 | O0 Only
-1  1  0 |  0  1  0  0 | O1 Only
-1  0  1 |  0  0  1  0 | O2 Only
-1  1  1 |  0  0  0  1 | O3 Only
+test bench which similarly gave the the truth table:  
+En A0 A1| O0 O1 O2 O3 | Expected Output    
+0  0  0 |  0  0  0  0 | All false  
+0  1  0 |  0  0  0  0 | All false    
+0  0  1 |  0  0  0  0 | All false  
+0  1  1 |  0  0  0  0 | All false  
+1  0  0 |  1  0  0  0 | O0 Only  
+1  1  0 |  0  1  0  0 | O1 Only  
+1  0  1 |  0  0  1  0 | O2 Only  
+1  1  1 |  0  0  0  1 | O3 Only  
 Because these two are identical I concluded that my device was working as expected.
 Then I looked into the gate delay propagation using GTK. From this, I got the following
-output graph.
+output graph.  
 ![Alt text](/decoderGTK.png?raw=true "Decoder Gate Delay")
 
 #Multiplexer
