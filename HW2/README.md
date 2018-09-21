@@ -36,7 +36,7 @@ output graph.
 
 # Multiplexer:
 To create a structural multiplexer in Verilog, I aimed to recreate the following circuit diagram.
-![Alt text](/schematic/multiplex_schem.png?raw=true "Multiplexer schematic (from TutorialsPoint)")
+![Alt text](/schematic/multiplex_schem.png "Multiplexer schematic (from TutorialsPoint)")
 I then verified that my multiplexer worked by running my file on a test bench that I created to test every case of inputs. This results in the following truth table:  
 
 En A0 A1| O0 O1 O2 O3 | Expected Output  
@@ -118,7 +118,7 @@ output graph.
 # Adder:  
 
 To create a structural adder in Verilog, I aimed to recreate the following circuit diagram.  
-![Alt text](https://github.com/anniekroo/ComputerArchitecture/tree/master/HW2/schematic/add_schem.jpg?raw=true "Full Adder schematic from ResearchGate")  
+![Alt text](https://github.com/anniekroo/ComputerArchitecture/tree/master/HW2/schematic/add_schem.png "Full Adder schematic from ResearchGate")  
 I then verified that my adder worked by running a test bench on my circuit that I modeleded after the example test bench and got out the following truth table:  
 
 a  b in | Out Sum| Expected Output  
