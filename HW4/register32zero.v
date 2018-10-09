@@ -1,4 +1,4 @@
-module register32
+module register32zero
 (
 output reg[31:0]	q,
 input[31:0]		d,
@@ -8,7 +8,7 @@ input		clk
 
     always @(posedge clk) begin
         if(wrenable) begin
-            q <= d;
+            q <= 0;
         end
     end
 
