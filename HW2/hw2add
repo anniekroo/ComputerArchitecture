@@ -6,141 +6,140 @@
 :vpi_module "vhdl_sys";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x153f700 .scope module, "behavioralFullAdder" "behavioralFullAdder" 2 7;
+S_0xdc80a0 .scope module, "behavioralFullAdder" "behavioralFullAdder" 2 7;
  .timescale -9 -12;
     .port_info 0 /OUTPUT 1 "sum"
     .port_info 1 /OUTPUT 1 "carryout"
     .port_info 2 /INPUT 1 "a"
     .port_info 3 /INPUT 1 "b"
     .port_info 4 /INPUT 1 "carryin"
-L_0x7fea0d3a5060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v0x1540a80_0 .net *"_s10", 0 0, L_0x7fea0d3a5060;  1 drivers
-v0x155eb00_0 .net *"_s11", 1 0, L_0x1560c00;  1 drivers
-v0x155ebe0_0 .net *"_s13", 1 0, L_0x1560db0;  1 drivers
-L_0x7fea0d3a50a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v0x155ecd0_0 .net *"_s16", 0 0, L_0x7fea0d3a50a8;  1 drivers
-v0x155edb0_0 .net *"_s17", 1 0, L_0x1560f10;  1 drivers
-v0x155eee0_0 .net *"_s3", 1 0, L_0x1560960;  1 drivers
-L_0x7fea0d3a5018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v0x155efc0_0 .net *"_s6", 0 0, L_0x7fea0d3a5018;  1 drivers
-v0x155f0a0_0 .net *"_s7", 1 0, L_0x1560ab0;  1 drivers
-o0x7fea0d3ee198 .functor BUFZ 1, C4<z>; HiZ drive
-v0x155f180_0 .net "a", 0 0, o0x7fea0d3ee198;  0 drivers
-o0x7fea0d3ee1c8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x155f2d0_0 .net "b", 0 0, o0x7fea0d3ee1c8;  0 drivers
-o0x7fea0d3ee1f8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x155f390_0 .net "carryin", 0 0, o0x7fea0d3ee1f8;  0 drivers
-v0x155f450_0 .net "carryout", 0 0, L_0x1560740;  1 drivers
-v0x155f510_0 .net "sum", 0 0, L_0x1560840;  1 drivers
-L_0x1560740 .part L_0x1560f10, 1, 1;
-L_0x1560840 .part L_0x1560f10, 0, 1;
-L_0x1560960 .concat [ 1 1 0 0], o0x7fea0d3ee198, L_0x7fea0d3a5018;
-L_0x1560ab0 .concat [ 1 1 0 0], o0x7fea0d3ee1c8, L_0x7fea0d3a5060;
-L_0x1560c00 .arith/sum 2, L_0x1560960, L_0x1560ab0;
-L_0x1560db0 .concat [ 1 1 0 0], o0x7fea0d3ee1f8, L_0x7fea0d3a50a8;
-L_0x1560f10 .arith/sum 2, L_0x1560c00, L_0x1560db0;
-S_0x153f930 .scope module, "testFullAdder" "testFullAdder" 3 5;
+L_0x7f10e9fcb060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xdc77e0_0 .net *"_s10", 0 0, L_0x7f10e9fcb060;  1 drivers
+v0xe0abe0_0 .net *"_s11", 1 0, L_0xe0c9d0;  1 drivers
+v0xe0acc0_0 .net *"_s13", 1 0, L_0xe0cb80;  1 drivers
+L_0x7f10e9fcb0a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xe0adb0_0 .net *"_s16", 0 0, L_0x7f10e9fcb0a8;  1 drivers
+v0xe0ae90_0 .net *"_s17", 1 0, L_0xe0cce0;  1 drivers
+v0xe0afc0_0 .net *"_s3", 1 0, L_0xe0c700;  1 drivers
+L_0x7f10e9fcb018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xe0b0a0_0 .net *"_s6", 0 0, L_0x7f10e9fcb018;  1 drivers
+v0xe0b180_0 .net *"_s7", 1 0, L_0xe0c850;  1 drivers
+o0x7f10ea014198 .functor BUFZ 1, C4<z>; HiZ drive
+v0xe0b260_0 .net "a", 0 0, o0x7f10ea014198;  0 drivers
+o0x7f10ea0141c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0xe0b3b0_0 .net "b", 0 0, o0x7f10ea0141c8;  0 drivers
+o0x7f10ea0141f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0xe0b470_0 .net "carryin", 0 0, o0x7f10ea0141f8;  0 drivers
+v0xe0b530_0 .net "carryout", 0 0, L_0xe0c4e0;  1 drivers
+v0xe0b5f0_0 .net "sum", 0 0, L_0xe0c5e0;  1 drivers
+L_0xe0c4e0 .part L_0xe0cce0, 1, 1;
+L_0xe0c5e0 .part L_0xe0cce0, 0, 1;
+L_0xe0c700 .concat [ 1 1 0 0], o0x7f10ea014198, L_0x7f10e9fcb018;
+L_0xe0c850 .concat [ 1 1 0 0], o0x7f10ea0141c8, L_0x7f10e9fcb060;
+L_0xe0c9d0 .arith/sum 2, L_0xe0c700, L_0xe0c850;
+L_0xe0cb80 .concat [ 1 1 0 0], o0x7f10ea0141f8, L_0x7f10e9fcb0a8;
+L_0xe0cce0 .arith/sum 2, L_0xe0c9d0, L_0xe0cb80;
+S_0xdc7620 .scope module, "testFullAdder" "testFullAdder" 3 5;
  .timescale -9 -12;
-v0x15600d0_0 .var "a", 0 0;
-v0x1560190_0 .net "and0", 0 0, L_0x1561140;  1 drivers
-v0x1560260_0 .net "and1", 0 0, L_0x1561310;  1 drivers
-v0x1560360_0 .var "b", 0 0;
-v0x1560430_0 .var "carryin", 0 0;
-v0x15604d0_0 .net "carryout", 0 0, L_0x1561460;  1 drivers
-v0x15605a0_0 .net "sum", 0 0, L_0x1561200;  1 drivers
-v0x1560670_0 .net "xor0", 0 0, L_0x1560ca0;  1 drivers
-S_0x155f670 .scope module, "adder" "structuralFullAdder" 3 10, 2 19 0, S_0x153f930;
+v0xe0c090_0 .var "a", 0 0;
+v0xe0c150_0 .var "b", 0 0;
+v0xe0c220_0 .var "carryin", 0 0;
+v0xe0c320_0 .net "carryout", 0 0, L_0xe0d380;  1 drivers
+v0xe0c3f0_0 .net "sum", 0 0, L_0xe0d070;  1 drivers
+S_0xe0b750 .scope module, "adder" "structuralFullAdder" 3 10, 2 19 0, S_0xdc7620;
  .timescale -9 -12;
     .port_info 0 /OUTPUT 1 "sum"
     .port_info 1 /OUTPUT 1 "carryout"
     .port_info 2 /INPUT 1 "a"
     .port_info 3 /INPUT 1 "b"
     .port_info 4 /INPUT 1 "carryin"
-    .port_info 5 /OUTPUT 1 "xor0"
-    .port_info 6 /OUTPUT 1 "and0"
-    .port_info 7 /OUTPUT 1 "and1"
-L_0x1560ca0 .functor XOR 1, v0x15600d0_0, v0x1560360_0, C4<0>, C4<0>;
-L_0x1561140 .functor AND 1, v0x15600d0_0, v0x1560360_0, C4<1>, C4<1>;
-L_0x1561200 .functor XOR 1, L_0x1560ca0, v0x1560430_0, C4<0>, C4<0>;
-L_0x1561310 .functor AND 1, L_0x1560ca0, v0x1560430_0, C4<1>, C4<1>;
-L_0x1561460 .functor OR 1, L_0x1561140, L_0x1561310, C4<0>, C4<0>;
-v0x155f930_0 .net "a", 0 0, v0x15600d0_0;  1 drivers
-v0x155fa10_0 .net "and0", 0 0, L_0x1561140;  alias, 1 drivers
-v0x155fad0_0 .net "and1", 0 0, L_0x1561310;  alias, 1 drivers
-v0x155fb70_0 .net "b", 0 0, v0x1560360_0;  1 drivers
-v0x155fc30_0 .net "carryin", 0 0, v0x1560430_0;  1 drivers
-v0x155fd40_0 .net "carryout", 0 0, L_0x1561460;  alias, 1 drivers
-v0x155fe00_0 .net "sum", 0 0, L_0x1561200;  alias, 1 drivers
-v0x155fec0_0 .net "xor0", 0 0, L_0x1560ca0;  alias, 1 drivers
-    .scope S_0x153f930;
+L_0xe0ca70/d .functor XOR 1, v0xe0c090_0, v0xe0c150_0, C4<0>, C4<0>;
+L_0xe0ca70 .delay 1 (50000,50000,50000) L_0xe0ca70/d;
+L_0xe0cf10/d .functor AND 1, v0xe0c090_0, v0xe0c150_0, C4<1>, C4<1>;
+L_0xe0cf10 .delay 1 (50000,50000,50000) L_0xe0cf10/d;
+L_0xe0d070/d .functor XOR 1, L_0xe0ca70, v0xe0c220_0, C4<0>, C4<0>;
+L_0xe0d070 .delay 1 (50000,50000,50000) L_0xe0d070/d;
+L_0xe0d220/d .functor AND 1, L_0xe0ca70, v0xe0c220_0, C4<1>, C4<1>;
+L_0xe0d220 .delay 1 (50000,50000,50000) L_0xe0d220/d;
+L_0xe0d380/d .functor OR 1, L_0xe0cf10, L_0xe0d220, C4<0>, C4<0>;
+L_0xe0d380 .delay 1 (50000,50000,50000) L_0xe0d380/d;
+v0xe0b970_0 .net "a", 0 0, v0xe0c090_0;  1 drivers
+v0xe0ba50_0 .net "and0", 0 0, L_0xe0cf10;  1 drivers
+v0xe0bb10_0 .net "and1", 0 0, L_0xe0d220;  1 drivers
+v0xe0bbe0_0 .net "b", 0 0, v0xe0c150_0;  1 drivers
+v0xe0bca0_0 .net "carryin", 0 0, v0xe0c220_0;  1 drivers
+v0xe0bdb0_0 .net "carryout", 0 0, L_0xe0d380;  alias, 1 drivers
+v0xe0be70_0 .net "sum", 0 0, L_0xe0d070;  alias, 1 drivers
+v0xe0bf30_0 .net "xor0", 0 0, L_0xe0ca70;  1 drivers
+    .scope S_0xdc7620;
 T_0 ;
     %vpi_call 3 13 "$dumpfile", "adder.vcd" {0 0 0};
     %vpi_call 3 14 "$dumpvars" {0 0 0};
     %vpi_call 3 16 "$display", "a  b in | Out Sum| Expected Output" {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 18 "$display", "%b  %b  %b |  %b   %b | All False", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 18 "$display", "%b  %b  %b |  %b   %b | All False", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 20 "$display", "%b  %b  %b |  %b   %b | Sum Only ", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 20 "$display", "%b  %b  %b |  %b   %b | Sum Only ", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 22 "$display", "%b  %b  %b |  %b   %b | Sum Only", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 22 "$display", "%b  %b  %b |  %b   %b | Sum Only", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 24 "$display", "%b  %b  %b |  %b   %b | Carryout Only ", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 24 "$display", "%b  %b  %b |  %b   %b | Carryout Only ", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 26 "$display", "%b  %b  %b |  %b   %b | Sum Only", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 26 "$display", "%b  %b  %b |  %b   %b | Sum Only", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 28 "$display", "%b  %b  %b |  %b   %b | Carryout Only ", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 28 "$display", "%b  %b  %b |  %b   %b | Carryout Only ", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 30 "$display", "%b  %b  %b |  %b   %b | Carryout Only", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 30 "$display", "%b  %b  %b |  %b   %b | Carryout Only", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x15600d0_0, 0, 1;
+    %store/vec4 v0xe0c090_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560360_0, 0, 1;
+    %store/vec4 v0xe0c150_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1560430_0, 0, 1;
+    %store/vec4 v0xe0c220_0, 0, 1;
     %delay 1000000, 0;
-    %vpi_call 3 32 "$display", "%b  %b  %b |  %b   %b | Both True ", v0x15600d0_0, v0x1560360_0, v0x1560430_0, v0x15604d0_0, v0x15605a0_0 {0 0 0};
+    %vpi_call 3 32 "$display", "%b  %b  %b |  %b   %b | Both True ", v0xe0c090_0, v0xe0c150_0, v0xe0c220_0, v0xe0c320_0, v0xe0c3f0_0 {0 0 0};
     %vpi_call 3 33 "$finish" {0 0 0};
     %end;
     .thread T_0;

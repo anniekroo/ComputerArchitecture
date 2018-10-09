@@ -7,7 +7,7 @@ module testFullAdder();
     wire sum, carryout, xor0, and0, and1;
 
     //behavioralFullAdder adder (sum, carryout, a, b, carryin);
-    structuralFullAdder adder (sum, carryout, a, b, carryin, xor0, and0, and1); // Swap after testing
+    structuralFullAdder adder (sum, carryout, a, b, carryin); // Swap after testing
 
     initial begin
     $dumpfile("adder.vcd");

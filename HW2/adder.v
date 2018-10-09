@@ -22,16 +22,16 @@ module structuralFullAdder
     output carryout,
     input a,
     input b,
-    input carryin,
-    output xor0, and0, and1
+    input carryin
 
 );
+    wire xor0, and0, and1;
     // My decoder code here
-    xor xorgate(xor0,a,b);
-    and andgate(and0,a,b);
-    xor xorgate(sum,xor0,carryin);
-    and andgate(and1,xor0,carryin);
-    or orgate(carryout,and0,and1);
+    `XOR xorgate(xor0,a,b);
+    `AND andgate(and0,a,b);
+    `XOR xorgate(sum,xor0,carryin);
+    `AND andgate(and1,xor0,carryin);
+    `OR orgate(carryout,and0,and1);
 
 
 
