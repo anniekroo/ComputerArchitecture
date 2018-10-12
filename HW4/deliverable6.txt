@@ -1,7 +1,1 @@
-The decoder works in this way because when the enable is equal to zero, the bit
-shifter operand ('<<') causes nothing to happen as there are no ones to move to
-the left. Alternatively, if enable is a 1, then this one is moved to the left
-(to be a more significant bit) by 'address' bits. This means that the output is
-a 32 bit string with a single 1 at the output of the specified address and zeros
-in every other position. This allows it to act as a decoder as 'enable' functions
-as our input and is written to a singular output as specified by the address.
+The decoder works in this way because when the enable is equal to zero, the bit shifter operand ('<<') causes nothing to happen as there are no ones to move to the left. Alternatively, if enable is a 1, then this one is moved to the left (to be a more significant bit) by 'address' bits. This means that the output is a 32 bit string with a single 1 at the output of the specified address and zeros in every other position. This allows it to act as a decoder as 'enable' functions as our input and is written to a singular output as specified by the address.
